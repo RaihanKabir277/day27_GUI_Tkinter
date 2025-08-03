@@ -23,11 +23,29 @@
     # for key,value in kwargs.items():
     #     print(value)
 
-def calculate(n, **kwargs):
-    print(kwargs)
-    n += kwargs["add"]
-    n *= kwargs["multiply"]
-    print(n)
+# def calculate(n, **kwargs):
+#     print(kwargs)
+#     n += kwargs["add"]
+#     n *= kwargs["multiply"]
+#     print(n)
 
-calculate(2,add=3, multiply=5)
+# calculate(2,add=3, multiply=5)
+
+
+# --------- create something like TK---------
+
+class Car:
+    def __init__(self, **kw):
+        # a problem will generated in the below code , if we did not call all of the attribute
+        # self.make = kw["make"]
+        # self.model = kw["model"]  
+        # get() will resolve this probelm
+        self.make = kw.get("make")
+        self.model = kw.get("model")
+
+# my_car = Car(make="Nissan", model="GT-R")
+# print(my_car.model)
+
+my_car = Car(make="Nissan")
+print(my_car.model)
 
