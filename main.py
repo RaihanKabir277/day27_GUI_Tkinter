@@ -23,5 +23,7 @@ my_label.pack(side="bottom", expand=1)
 # fun(b=5)   #it will work also 
 
 
+
+
 window.mainloop()
 
