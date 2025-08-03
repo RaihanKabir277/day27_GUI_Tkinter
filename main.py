@@ -18,14 +18,16 @@ my_label.pack()
 
 def button_clicked():
     print("I got clicked")
-    my_label.config(text="Button Got Clicked")
+    new_text = entry.get()
+    my_label.config(text=new_text)
 
 button = tkinter.Button(text="Click Me", command=button_clicked)
 button.pack()
 
 # ---------Entry------
 
-
+entry = tkinter.Entry(width=10)
+entry.pack()
 
 
 # --------Argument with default values----------
