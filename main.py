@@ -8,9 +8,25 @@ window.minsize(500, 300)
 #------label--------
 
 # my_label = tkinter.Label(text="This is Kabir")  #should define text = " " neither its not work
-my_label = tkinter.Label(text="This is Kabir", font=("Arial", 18, "bold"))  
-my_label.pack(side="bottom", expand=1)
-# my_label.pack()
+my_label = tkinter.Label(text="this is kabir", font=("Arial", 18, "bold"))  
+# my_label.pack(side="bottom", expand=1)
+my_label.pack()
+# ------ if we want to change the label value is given below----
+
+# my_label["text"] = "this is raihan"
+# my_label.config(text="this is raihan")
+
+def button_clicked():
+    print("I got clicked")
+    my_label.config(text="Button Got Clicked")
+
+button = tkinter.Button(text="Click Me", command=button_clicked)
+button.pack()
+
+# ---------Entry------
+
+
+
 
 # --------Argument with default values----------
 
@@ -22,7 +38,8 @@ my_label.pack(side="bottom", expand=1)
 # fun()   #no need to give argument by default it will work perfectly 
 # fun(b=5)   #it will work also 
 
-
+# ---------- from tkinter import * 
+# window = tkinter.Tk() instead of this we will write window = Tk()
 
 
 window.mainloop()
